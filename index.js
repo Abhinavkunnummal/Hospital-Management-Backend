@@ -2,10 +2,10 @@ const express =require('express')
 const connectDB = require('./config/db')
 const app=express()
 const cors=require('cors')
+require('dotenv').config();
 connectDB()
 app.use(express.json())
 app.use(cors())
-require('dotenv').config();
 const patientRoute=require('./routes/patientRoute')
 const doctorRoute=require('./routes/doctorRoute')
 const appointmentRoute=require('./routes/appointmentRoute')
